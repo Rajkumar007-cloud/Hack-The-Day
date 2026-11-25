@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: hack-the-day-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: hack-the-day-app
+    ports:
+      - "4444:4444"
+    environment:
+      - mongodb_uri=mongodb://mongodb:27017
+      - mongodb_collection=${MONGODB_COLLECTION:-hacktank}
+      - sheetsId=${SHEETS_ID}
+    volumes:
+      - ./sheets_creds.json:/app/sheets_creds.json:ro
+      - ./dist:/app/dist:ro
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
