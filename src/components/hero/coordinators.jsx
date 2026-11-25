@@ -16,9 +16,9 @@ const coordinators = () => {
               src="/images/giridharan.webp"
               alt="Giridharan - Assistant professor"
             />
-            <h1 className="convener-name">Mr. S. Giridharan</h1>
+            <h1 className="convener-name">Mr. Aloke Roy</h1>
             <h1 className="convener-position">
-              Assistant Professor - Cyber Security
+              Assistant Professor, H.O.D, Dean Academics - CSE 
             </h1>
           </div>
           <div className="convener-card">
@@ -27,10 +27,10 @@ const coordinators = () => {
               src="/images/nandhashree.webp"
               alt="Nandhashree - Assistant professor"
             />
-            <h1 className="convener-name"> Ms. K.R. Nandhashree</h1>
+            <h1 className="convener-name"> Mr. Amit Goswami</h1>
             <h1 className="convener-position">
-              Assistant Professor - Cyber Security
-            </h1>
+              Assitant Professor - Artifical Neural Network (NAA) 
+              </h1>
           </div>
         </div>
       </div>
