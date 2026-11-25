@@ -1,0 +1,221 @@
+.parent-software {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  padding-bottom: 10vh;
+}
+.parent-software-title {
+  padding-top: 2vh;
+  font-size: 3.5vw;
+  color: rgb(188, 219, 244);
+  font-family: audiowide;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 5.5vw;
+    padding: 2vh 2vw;
+  }
+}
+.projects-disclaimer {
+  font-size: 1.4vw;
+  padding: 3vh 2vw;
+  font-family: exo;
+  font-weight: 700;
+  color: rgb(189, 225, 254);
+  text-transform: uppercase;
+  text-align: center;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 2.5vw;
+  }
+}
+.software-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2vh 5vw;
+  column-gap: 5vw;
+  row-gap: 10vh;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+    flex-direction: column;
+  }
+}
+
+.software-content {
+  flex-basis: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dotted white;
+  padding: 2vh 0vw;
+  border-radius: 1vw;
+  gap: 2vh;
+  transition: all 0.3s linear;
+  overflow-y: hidden;
+  background-color: rgb(188, 219, 244, 0.1);
+  backdrop-filter: blur(1vw);
+  cursor: pointer;
+  text-align: center;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    border-radius: 2vw;
+    padding: 1vh 1vw;
+    width: 100%;
+  }
+}
+.projects-view {
+  display: block;
+}
+.projects-close {
+  display: none;
+}
+.software-content-title {
+  font-size: 1.5vw;
+  font-family: exo;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0vh 1vw;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 4vw;
+    padding: 0vh 1vw;
+  }
+}
+.software-content-description {
+  padding: 0vh 1vw;
+  text-align: justify;
+  animation: softwareFade 0.3s ease-in forwards;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 4vw;
+    padding: 1vh 2vw;
+  }
+}
+@keyframes softwareFade {
+  0% {
+    opacity: 0;
+    transform: translateY(5vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+}
+
+.domain-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+  margin: 3vh 0;
+  padding: 0 2vw;
+}
+
+.domain-tab {
+  padding: 1vh 2vw;
+  border: 2px solid;
+  border-radius: 2vw;
+  font-family: exo;
+  font-weight: 700;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 3vw;
+    padding: 1vh 3vw;
+  }
+}
+
+.domain-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.statement-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  margin-bottom: 1vh;
+}
+
+.detail-section {
+  margin: 2vh 0;
+  text-align: left;
+  width: 100%;
+}
+
+.detail-section h3 {
+  font-family: exo;
+  font-weight: 700;
+  font-size: 1.3vw;
+  color: rgb(188, 219, 244);
+  margin-bottom: 1vh;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(188, 219, 244, 0.3);
+  padding-bottom: 0.5vh;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 3.5vw;
+  }
+}
+
+.detail-section p {
+  font-family: exo;
+  font-size: 1.1vw;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 3vw;
+  }
+}
+
+.detail-section ul {
+  font-family: exo;
+  font-size: 1.1vw;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  padding-left: 2vw;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 3vw;
+  }
+}
+
+.detail-section li {
+  margin: 0.5vh 0;
+}
+
+.click-hint {
+  margin-top: 2vh;
+  font-family: exo;
+  font-size: 1vw;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 2.5vw;
+  }
+}
+
+.problem-number {
+  font-family: audiowide;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: rgb(188, 219, 244);
+  margin-bottom: 1vh;
+  opacity: 0.8;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    font-size: 4vw;
+  }
+}
+
+.software-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  border-color: rgba(188, 219, 244, 0.5);
+}
