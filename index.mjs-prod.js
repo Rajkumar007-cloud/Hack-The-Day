@@ -8,7 +8,7 @@ import path from "path";
 
 const __dirname = path.resolve();
 const app = express();
-const port = 4444;
+const port = process.env.PORT || 4444;
 const mongo_uri = process.env.mongodb_uri;
 const client = new MongoClient(mongo_uri);
 client.connect();
