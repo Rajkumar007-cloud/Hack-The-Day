@@ -38,8 +38,6 @@ const guildelines = () => {
               <br />
               &nbsp;&nbsp;&nbsp;- Uploading and managing code.
               <br />
-              &nbsp;&nbsp;&nbsp;- Committing changes.
-              <br />
               &nbsp;&nbsp;&nbsp;- Pushing code to GitHub.
             </div>
             <div className="guidelines-2">
